@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>CBF CURSOS</title>
+	<script type="text/javascript">
+		
+		var dt = new Date();
+
+
+		var novaData = new Date();
+		//novaData.setDate(novaData.getDate()+2);
+		//novaData.setFullYear(novaData.getFullYear()+2);
+		var ndt = new Date(1978,03,07,20,10,01);
+
+		document.write(ndt);
+
+
+
+		var diaSem= novaData.getDay();
+		var dia = novaData.getDate();
+		var mes = novaData.getMonth();
+		var ano = novaData.getFullYear();
+
+		var horas = novaData.getHours();
+		var minutos = novaData.getMinutes();
+		var segundos = novaData.getSeconds();
+
+
+		var meses = new Array();
+		meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro","Dezembro"];
+		var semanas = ["domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado"];
+
+		//document.write(diaSem);
+		//document.write((diaSem+1) + " - " + dia + " / " + (mes+1) + " / " + ano);
+		document.write(semanas[diaSem]+ " - " + dia + " de " + meses[mes] + " de " + ano);
+		document.write("<br><br> HORA: "+horas+":"+minutos+":"+segundos);
+
+	</script>	
+</head>
+<body>
+
+
+
+</body>
+</html>
+
+
+

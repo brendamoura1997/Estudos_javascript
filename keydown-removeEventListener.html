@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>CBF CURSOS</title>
+
+	<style type="text/css">
+		#dv1{
+			width: 100px;
+			height: 100px;
+			border: 1px solid #000;
+			background-color: #f00;
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			bottom: 10px;
+
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		var posX = 10;
+		var posY =10;
+
+		var posicaoE = 10;
+
+
+		function mover(){
+			var obj = document.getElementById("dv1");
+			var tecla = event.keyCode;
+			//37-Esquerda 38-Cima 39-Direita 40-Baixo
+			switch(tecla){
+				case 37:
+					posX-=10;
+					obj.style.left= posX+"px";
+				break;
+				case 38:
+					posY-=10;
+					obj.style.top= posY+"px";
+				break;
+				case 39:
+					posX+=10;
+					obj.style.left= posX+"px";
+				break;
+				case 40:
+					posY+=10;
+					obj.style.top= posY+"px";
+					
+				break;
+				case 13:
+					alert("EVENTO KEYDOWN REMOVIDO");
+					document.removeEventListener("keydown",mover);
+				break;
+
+
+
+		}
+	}
+
+		document.addEventListener("keydown",mover);
+	
+	</script>	
+</head>
+<body>
+
+	<div id="dv1"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

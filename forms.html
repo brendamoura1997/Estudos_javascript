@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>CBF CURSOS</title>
+
+	<style type="text/css">
+		.label{
+			display: block;
+		}
+		input{
+			display: block;
+
+		}
+		input[type=submit],label{
+			margin-top: 10px; 
+		}
+
+	</style>
+	
+</head>
+<body>
+
+
+	<form name="curso1" id="curso1" action="#" method="post"> 
+		<label> Nome </label>
+		<input type="text" name="fNome" id="teste" value="Primeiro = 1">
+		<label> Senha </label>
+		<input type="password" name="fSenha" value="123">
+		<input type="submit" name="btEnviar" value="Enviar">
+
+
+
+	</form>
+
+	<hr>
+	<form name="curso2" id="curso2" action="#" method="post"> 
+		<label> Nome </label>
+		<input type="text" name="fNome" id="teste" value="Segundo = 2">
+		<label> Senha </label>
+		<input type="password" name="fSenha" value="123">
+		<input type="submit" name="btEnviar" value="Enviar">
+
+
+
+	</form>
+
+	<hr>
+
+
+	<script type="text/javascript">
+		//var fm = document.forms[0].id;
+		//var fm = document.forms.namedItem("curso1").id
+		//var fm = document.forms.namedItem("curso1").innerHTML;
+		//var fm = document.forms["curso2"].elements[0].value;
+		
+		document.write(document.getElementById("curso1").elements[0].value);
+
+		//document.write(fm);
+		var fm = document.forms[0];
+		var el = fm.elements;
+
+		for(var i=0; i<el.length-1; i++){
+
+		el[i].style.backgroundColor="#ddd";
+		el[i].value="CFBCursos";
+
+		}
+
+		//document.write(el);
+
+	</script>
+
+</body>
+</html>
+
+
+

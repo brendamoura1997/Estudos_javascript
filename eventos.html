@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>CBF CURSOS</title>
+
+	<style type="text/css">
+		#dv1{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		function mudaCor(obj, cor){
+			obj.style.backgroundColor=cor;
+		}
+
+		function mudaPos(obj){
+			obj.style.position="absolute";
+			obj.style.left= Math.random()*500+"px";
+			obj.style.top= Math.random()*500+"px";
+		}
+
+		function saudacao(){
+			var horario = new Date();
+			horario.setHours(horario.getHours()+20);
+			var horarioUsuario = horario.getHours();
+
+			if((horarioUsuario >=19 && horarioUsuario <=23) ||  (horarioUsuario >=0 && horarioUsuario <=3)){
+				alert("BOA NOITE!");
+			}
+			else if(horarioUsuario >=12 && horarioUsuario <=18){
+				alert("BOA TARDE!");
+			}else{
+				alert("BOM DIA!");
+			}
+
+			document.write(horarioUsuario);
+		}
+
+
+	</script>	
+</head>
+<body onload="saudacao()">
+
+
+	<div id="dv1" onmouseover="mudaCor(this,'#f00')" onmouseout="mudaCor(this,'#fff')"> </div>
+	<br/>
+	<!-- <button onclick="alert('OLAAAAR')" onmouseover="mudaCor(document.getElementById('dv1'),'#00f')"> CLIQUE AQUI </button> -->
+	<!-- <button onclick="alert('OLAAAAR')" onmouseover="mudaPos(this)"> CLIQUE AQUI </button> -->
+	<button onclick="alert('OLAAAAR')" onmouseover="mudaPos(document.getElementById('dv1'))"> CLIQUE AQUI </button>
+
+
+</body>
+</html>
+
+
+

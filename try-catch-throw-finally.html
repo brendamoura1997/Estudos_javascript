@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>CBF CURSOS</title>
+	
+	<script type="text/javascript">
+
+		var num;
+
+		try{
+			num = prompt("Digite um número menor que 10: ","");
+
+			if(num > 10){
+				throw new Error("Este número é maior do que 10!");
+
+			}
+			
+
+		}catch(e){
+			console.log("ERRO: "+e.message);
+			num = 10;
+		}finally{
+			document.write("<br>Valor: "+num);
+		}
+
+		/*try{
+			num = prompt("Digite um número menor que 10: ","");
+
+			if(num > 10){
+				throw new Error("Este número é maior do que 10!");
+
+			}
+			document.write("Valor: "+num);
+
+		}catch(e){
+			document.write("ERRO: "+e.message);
+		}finally{
+			document.write("fim do tratamento");
+		}*/
+
+/*
+		try{
+			document.writi("CFB");
+
+		}catch(e){
+			document.write("ERRO");
+			console.log("Mensagem de erro"+e.message);
+		}*/
+
+
+	</script>
+</head>
+<body>
+
+
+
+
+</body>
+</html>

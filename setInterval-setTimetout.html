@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>CBF CURSOS</title>
+
+	<style type="text/css">
+		#dv1{
+			width: 100px;
+			height: 100px;
+			border: 1px solid #000;
+			background-color: #fff;
+			
+
+		}
+	</style>
+
+	<script type="text/javascript">
+
+		var tmp ;
+
+		function mudaCor(){
+			var obj = document.getElementById("dv1");
+
+			var r = Math.floor(Math.random()*255);
+			var g = Math.floor(Math.random()*255);
+			var b = Math.floor(Math.random()*255);
+
+			console.log("R:"+r+" G: "+g+" B: "+b);
+
+			obj.style.backgroundColor="rgb("+r+","+g+","+b+")";
+		}
+
+		//var tmp = setTimeout(mudaCor, 3000);
+		function parar(){
+			
+			clearInterval(tmp);
+
+		}
+
+		function iniciar(){
+			tmp = setInterval(mudaCor, 3000);	
+			console.log("TMP::::::::::: "+tmp);
+		}
+		
+
+
+
+		function addEventos(){
+			//addEventListener("load",mudaCor);
+
+		var botao2= document.getElementById("bt2");
+		var botao1= document.getElementById("bt1");
+		botao1.addEventListener("click",iniciar);
+		botao2.addEventListener("click",parar);			
+		}
+
+		addEventListener("load",addEventos);
+	
+	</script>	
+</head>
+<body>
+
+	<div id="dv1"></div>
+
+	<button id="bt1"> INICIAR </button>
+	<button id="bt2"> PARAR </button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

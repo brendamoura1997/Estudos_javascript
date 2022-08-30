@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>CBF CURSOS</title>
+	
+</head>
+<body>
+
+	 <p> CFB CURSOS </p>
+	 <p> CURSO DE JAVASCRIPT </p>
+	 <p> AULA 25 </p>
+	 <p> www.youtube.com/cfbcursos </p>
+	 <p> cfbcursos.com.br </p>
+	 
+	 <hr/>
+
+
+
+	<script type="text/javascript">
+	
+	//var tagsP = document.getElementsByTagName("p");
+
+	/*tagsP[2].style.color="#f00";
+	document.write(tagsP[2].innerHTML);*/
+
+
+/*
+	for(var i=0; i<tagsP.length; i++){
+			document.getElementsByTagName("p")[i].style.color="#f00";
+			document.write(tagsP[i].innerHTML + "<br>");
+		}*/
+
+
+	//PARA PEGAR TODOS OS ELELMENTOS DA PÁGINA:
+	var tagsP = document.getElementsByTagName("*");
+	for(var i=0; i<tagsP.length; i++){
+		tagsP[i].style.color="#f00";
+		tagsP[i].style.fontSize="30pt";
+	}
+
+
+/*		var tagsP = document.getElementsByTagName("p");
+		//document.write(tagsP[0].innerHTML);
+
+		for(var i=0; i<tagsP.length; i++){
+			document.write(tagsP[i].innerHTML + "<br>");
+		}
+*/
+	</script>
+
+</body>
+</html>
